@@ -80,7 +80,8 @@ public class MillennialInterstitialAdapter extends BaseInterstitialAdapter imple
 
         mMillennialAdView = new MMAdView(mActivityReference.get(), pubId, 
                 MMAdView.FULLSCREEN_AD_TRANSITION, MMAdView.REFRESH_INTERVAL_OFF);
-        mMillennialAdView.setId(MMAdViewSDK.DEFAULT_VIEWID);
+        //mMillennialAdView = new MMAdView(mActivityReference.get(), pubId, MMAdView.FULLSCREEN_AD_TRANSITION, true, null); 
+        //mMillennialAdView.setId(MMAdViewSDK.DEFAULT_VIEWID);
         mMillennialAdView.setListener(this);
     }
 
@@ -156,17 +157,17 @@ public class MillennialInterstitialAdapter extends BaseInterstitialAdapter imple
         });
     }
 
-    @Override
-    public void MMAdClickedToNewBrowser(MMAdView adview) {
-        mHandler.post(new Runnable() {
-            public void run() {
-                if (isInvalidated()) return;
-                
-                Log.d("MoPub", "Millennial interstitial clicked to new browser");
-                recordClickIfNecessary();
-            }
-        });
-    }
+//    @Override
+//    public void MMAdClickedToNewBrowser(MMAdView adview) {
+//        mHandler.post(new Runnable() {
+//            public void run() {
+//                if (isInvalidated()) return;
+//                
+//                Log.d("MoPub", "Millennial interstitial clicked to new browser");
+//                recordClickIfNecessary();
+//            }
+//        });
+//    }
 
     @Override
     public void MMAdClickedToOverlay(MMAdView adview) {

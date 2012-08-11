@@ -175,17 +175,17 @@ public class MillennialAdapter extends BaseAdapter implements MMAdListener {
         });
     }
 
-    @Override
-    public void MMAdClickedToNewBrowser(MMAdView adview) {
-        mHandler.post(new Runnable() {
-            public void run() {
-                if (isInvalidated()) return;
-                
-                Log.d("MoPub", "Millennial clicked");
-                mMoPubView.registerClick();
-            }
-        }); 
-    }
+//    @Override
+//    public void MMAdClickedToNewBrowser(MMAdView adview) {
+//        mHandler.post(new Runnable() {
+//            public void run() {
+//                if (isInvalidated()) return;
+//                
+//                Log.d("MoPub", "Millennial clicked");
+//                mMoPubView.registerClick();
+//            }
+//        }); 
+//    }
 
     @Override
     public void MMAdClickedToOverlay(MMAdView adview) {
