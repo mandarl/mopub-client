@@ -387,7 +387,7 @@ public class AdView extends WebView {
         
         boolean mraid = true;
         try {
-            Class.forName("com.mopub.mraid.MraidView", false, ClassLoader.getSystemClassLoader());
+            Class.forName("com.mopub.mobileads.MraidView");
         } catch (ClassNotFoundException e) {
             mraid = false;
         }
@@ -817,5 +817,10 @@ public class AdView extends WebView {
     
     public boolean getTesting() {
         return mTesting;
+    }
+    
+    public void forceRefresh() {
+        mIsLoading = false;
+        loadAd();
     }
 }
